@@ -1,0 +1,14 @@
+html {
+    background-color: #DBC5E3;
+    font-size: 20px;
+  }
+  
+  ul {
+    background: #EBDCFD;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  li {
+    margin-left: 20px;
+  }
