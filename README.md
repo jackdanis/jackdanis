@@ -2,7 +2,7 @@
 - 👀 I’m interested in video games, graphic design, animation and website development
 - 🌱 I’m currently learning JavaScript, HTML, CSS & Blender
 - 📫 Reach me @ www.jackdanis.com
-- This site is primarily going to be for my school projects at the moment
+- This site is primarily going to be for my school projects at the moment!
 
 
 <!---
