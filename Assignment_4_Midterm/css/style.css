@@ -110,6 +110,37 @@ nav ul li {
 }
 /* Navbar ends */
 
+
+/*------Classes for boxes to Display------*/
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin: 2rem;
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Hero section */
 .hero {
   display: flex;
