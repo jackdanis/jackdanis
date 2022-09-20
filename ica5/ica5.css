@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  background: #ccc;
+  background: rgb(255, 255, 255);
 }
 
 article {
@@ -36,11 +36,15 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+  background-image: url(../ica5/img/logo.png); background-size: cover; background-position: center center;
+  /*box-shadow: 0px 2px 15px 2px black;*/
+  filter:drop-shadow(8px 8px 10px black)
 }
 
 /* Your CSS below here */
 
 .topheader{
+  border-top: 1mm solid red;
   box-sizing: content-box;
   position: absolute;
   height: 10rem;
@@ -50,12 +54,19 @@ h1 {
   z-index: 1;
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background-image: url(../ica5/img/top-image.png); background-size: cover; background-position: center center
+  background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 255, 255, 0.00),rgba(245, 246, 252, 0.10)), url(../ica5/img/top-image.png); background-size: cover; background-position: center center;
 }
 
-
-.demo{
-font-size: .25rem;
-color:black;
+.bottomfooter{
+  border-bottom: 1mm solid red;
+  box-sizing: content-box;
+  position: absolute;
+  height: 10rem;
+  width: 50rem;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0.10),rgba(255, 255, 255, 0.00),rgba(245, 246, 252, 0.52)), url(../ica5/img/bottom-image.png); background-size: cover; background-position: center center;
 }
