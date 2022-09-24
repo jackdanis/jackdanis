@@ -1,11 +1,10 @@
 /* Variables */
 @font-face {
   font-family: 'chicagoflfregular';
-  src: url('../css/fonts/chicagoflf-webfont.woff') format('woff'),
-       url('../css/fonts/chicagoflf-webfont.woff2') format('woff2');
+  src: url('fonts/chicagoflf-webfont.woff') format('woff'),
+       url('fonts/chicagoflf-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-
 }
 
 :root {
@@ -14,7 +13,7 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: #0a0a0d;
+  --primary-color: #000000;
   --secondary-color: #5f260e;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -113,7 +112,7 @@ nav ul li {
 
 /*------Classes for boxes to Display------*/
 .box {
-  border: 5px solid rebeccapurple;
+  border: 5px solid rgb(48, 48, 48);
   background-color: lightgray;
   padding-left: 1rem;
   padding-top: 1rem;
@@ -124,6 +123,37 @@ nav ul li {
   align-items: center;
   justify-content: space-between;
 }
+
+    
+.note {
+  background: lightyellow;
+  border: 1px solid yellow;
+  padding: 1rem;
+}
+
+hr {
+  border-bottom: dashed 1px #000000;
+}
+
+a:link,
+a:visited {
+    color: #fb6542;
+  }
+
+a:hover {
+    text-decoration-color: green;
+    color: green;
+  }
+
+
+
+
+
+
+
+
+
+
 
     
 
