@@ -1,76 +1,105 @@
 /* Variables */
-@font-face {
-  font-family: 'chicagoflfregular';
-  src: url('fonts/chicagoflf-webfont.woff') format('woff'),
-       url('fonts/chicagoflf-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'chicagoflfregular';
+    src: url('fonts/chicagoflf-webfont.woff') format('woff'),
+        url('fonts/chicagoflf-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'torrancemedium';
+    src: url('fonts/torrance-lgzl0-webfont.woff2') format('woff2'),
+        url('fonts/torrance-lgzl0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face {
-  font-family: 'torrancemedium';
-  src: url('fonts/torrance-lgzl0-webfont.woff2') format('woff2'),
-       url('fonts/torrance-lgzl0-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  }
 
-}
-
-:root {
-  --font-family: "chicagoflfregular", sans-serf;
-  --normal-font: 400;
-  --bold-font: 700;
-  --bolder-font: 900;
-  --bg-color: #fcfcfc;
-  --primary-color: #000000;
-  --secondary-color: #5f260e;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
-  --transition: 0.3s;
-}
+  :root {
+    --font-family: "chicagoflfregular", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #000000;
+    --secondary-color: #5f260e;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
 /* Variables end */
 
-html {
-  scroll-behavior: smooth;
-}
 
 /* CSS Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* border: 2px solid red; */
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-ul {
-  list-style-type: none;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+  }
 
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
+  ul {
+    list-style-type: none;
+  }
 
-a:hover {
-  color: var(--secondary-color);
-}
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
 
-body {
-  font-family: var(--font-family);
-}
+  a:hover {
+    color: var(--secondary-color);
+  }
 
+  body {
+    font-family: var(--font-family);
+  }
 
-/*
-section {
-   max-width: 1100px;
-  margin: auto;
-}
-*/
-
-/* CSS Resets end */
+  .box {
+    border: 5px solid rgb(48, 48, 48);
+    background-color: lightgray;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin: 2rem;
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  hr {
+    border-bottom: dashed 1px #000000;
+  }
+  
+  a:link,
+  a:visited {
+      color: #fb6542;
+    }
+  
+  a:hover {
+      text-decoration-color: green;
+      color: green;
+    }
+  
+  
+    p {
+      font-family: 'torrancemedium';
+      font-weight:normal;
+      font-style:normal;
+      }
+  
+  ul.a {
+      list-style-type: circle;
+    }
 
 /* Navbar */
 nav {
@@ -94,6 +123,7 @@ nav a {
   color: var(--primary-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -120,69 +150,6 @@ nav ul li {
 
 
 /*------Classes for boxes to Display------*/
-.box {
-  border: 5px solid rgb(48, 48, 48);
-  background-color: lightgray;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  margin: 2rem;
-  width: 10rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-    
-.note {
-  background: lightyellow;
-  border: 1px solid yellow;
-  padding: 1rem;
-}
-
-hr {
-  border-bottom: dashed 1px #000000;
-}
-
-a:link,
-a:visited {
-    color: #fb6542;
-  }
-
-a:hover {
-    text-decoration-color: green;
-    color: green;
-  }
-
-
-  p {
-    font-family: 'torrancemedium';
-    font-weight:normal;
-    font-style:normal;
-    }
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Hero section */
 .hero {
