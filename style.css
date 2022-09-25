@@ -7,6 +7,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'torrancemedium';
+  src: url('fonts/torrance-lgzl0-webfont.woff2') format('woff2'),
+       url('fonts/torrance-lgzl0-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 :root {
   --font-family: "chicagoflfregular", sans-serf;
   --normal-font: 400;
@@ -146,7 +155,11 @@ a:hover {
   }
 
 
-
+  p {
+    font-family: 'torrancemedium';
+    font-weight:normal;
+    font-style:normal;
+    }
 
 
 
