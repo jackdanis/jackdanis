@@ -151,15 +151,19 @@ nav ul li {
 
 /*-----BLOCK CONTENTS & CLASSES-----*/
 
-
-.rainbow {
-  padding-left: 1em;
-  text-align: left;
-  text-decoration: underline;
-  font-size: 32px;
-  font-family: monospace;
-  letter-spacing: 5px;
+.hello_h2 {
+  font-size: 4.5rem;
 }
+.hello_desc {
+  font-size: 2rem;
+}
+.hello-text {
+  padding: 5rem;
+  text-align: left;
+  position: relative;
+  color: var(--primary-color);
+}
+
 .rainbow_text_animated {
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
@@ -179,6 +183,33 @@ nav ul li {
   }
 }
 
+a.resumebtn {
+  position: relative;
+  margin-left: 5rem;
+  font-size: larger;
+  padding:0.35em 1.2em;
+  border:0.1em solid #000000;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'chicagoflfregular';
+  font-weight: 500;
+  color:#000000;
+  text-align:center;
+  transition: all 0.2s;
+  }
+    a.resumebtn:hover{
+    color:#ffffff;
+    background-color:#000000;
+    }
+    @media all and (max-width:30em){
+    a.button1{
+    display:block;
+    margin:5rem auto;
+    }
+    
+}
+
 
 /* Footer section */
 footer {
@@ -190,7 +221,7 @@ footer {
 /* Footer section ends */
 
 
-/* Media queries for responsiveness */
+/* Media queries for Desktop */
 @media screen and (max-width: 720px) {
   nav {
     padding: 1.5rem 1rem;
@@ -221,3 +252,12 @@ footer {
 
 }
 
+/*Media queries for Mobile*/
+@media screen and (max-width: 720px) {
+  .hello_h2 {
+    font-size: 3rem;
+  }
+  .hello_desc {
+    font-size: 1.5rem;
+  }
+}
