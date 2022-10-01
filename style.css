@@ -35,14 +35,13 @@
 
   html {
     scroll-behavior: smooth;
-  }
-
-  * {
     margin: 0;
-    padding: 2;
-    box-sizing: border-box;
   }
 
+* {
+  padding: 0;
+  margin: 0;
+}
 
 /*---Body Presets--*/
 
@@ -65,20 +64,6 @@
   h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-family);
   }
-/*
-  .box {
-    border: 5px solid rgb(0, 0, 0);
-    background-color: lightgray;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    margin: 2rem;
-    width: 10rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-*/
   
   hr {
     border-bottom: dashed 1px #000000;
@@ -139,13 +124,61 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
-.icon-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
+
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+  display: none;
+}/* Style label tag */
+
+.hamb-line {
+  background: var(--primary-color);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: var(--primary-color);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
 /* Navbar ends */
 
 
@@ -158,7 +191,7 @@ nav ul li {
   font-size: 2rem;
 }
 .hello-text {
-  padding: 5rem;
+  margin: 4rem;
   text-align: left;
   position: relative;
   color: var(--primary-color);
@@ -185,7 +218,7 @@ nav ul li {
 
 a.resumebtn {
   position: relative;
-  margin-left: 5rem;
+  margin-left: 6rem;
   font-size: larger;
   padding:0.35em 1.2em;
   border:0.1em solid #000000;
@@ -221,7 +254,7 @@ footer {
 /* Footer section ends */
 
 
-/* Media queries for Desktop */
+/* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
   nav {
     padding: 1.5rem 1rem;
@@ -242,22 +275,18 @@ footer {
     margin: 8px;
   }
 
-  .burger-menu {
-    display: block;
-  }
-
   nav ul.show {
     transform: translateX(0);
   }
-
-}
-
-/*Media queries for Mobile*/
-@media screen and (max-width: 720px) {
   .hello_h2 {
     font-size: 3rem;
   }
   .hello_desc {
     font-size: 1.5rem;
   }
+
+  .hamb{
+    display: block;
 }
+}
+
