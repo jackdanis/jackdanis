@@ -79,7 +79,7 @@
       list-style-type: circle;
   }
 
-/*---Navbar---*/
+/*---Navbar (Which needs to be redone because its a mess)---*/
 
 nav {
   position: sticky;
@@ -115,12 +115,14 @@ nav h1 {
 }
 
 nav ul {
+  text-align: right;
   list-style-type: none;
   display: flex;
   gap: 1.9rem;
 }
 
 nav ul li {
+  display: inline-block;
   font-weight: var(--bold-font);
 }
 
@@ -260,23 +262,30 @@ footer {
     padding: 1.5rem 1rem;
   }
   nav ul {
-    position: fixed;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 71px);
     background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
+    left: 0;
+    top: 2em;
     text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    display: none;
+    margin-top: 71px;
   }
 
   nav ul li {
-    margin: 8px;
+    display: block;
+    padding: 10px 15px;
   }
 
-  nav ul.show {
-    transform: translateX(0);
+  nav ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .side-menu:checked~nav ul {
+    display: block;
   }
   .hello_h2 {
     font-size: 3rem;
@@ -287,6 +296,6 @@ footer {
 
   .hamb{
     display: block;
-}
+  }
 }
 
