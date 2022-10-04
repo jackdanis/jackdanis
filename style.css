@@ -79,7 +79,7 @@
       list-style-type: circle;
   }
 
-/*---Navbar (Which needs to be redone because its a mess)---*/
+/*---Navbar---*/
 
 nav {
   position: sticky;
@@ -92,6 +92,8 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: right;
 }
 
 nav a {
@@ -127,13 +129,13 @@ nav ul li {
 }
 
 
-/* Menu Icon */
+/* Hamburger Icon */
 .hamb{
   cursor: pointer;
   float: right;
   padding: 40px 20px;
   display: none;
-}/* Style label tag */
+}
 
 .hamb-line {
   background: var(--primary-color);
@@ -142,7 +144,7 @@ nav ul li {
   position: relative;
   width: 24px;
 
-} /* Style span tag */
+}
 
 .hamb-line::before,
 .hamb-line::after{
@@ -163,9 +165,9 @@ nav ul li {
 
 .side-menu {
   display: none;
-} /* Hide checkbox */
+} /* Hides the checkbox */
 
-/* Toggle menu icon */
+/* Toggle Menu icon */
 .side-menu:checked ~ nav{
   max-height: 100%;
 }
@@ -180,47 +182,27 @@ nav ul li {
   transform: rotate(45deg);
   top:0;
 }
-
 /* Navbar ends */
 
 
-/*-----BLOCK CONTENTS & CLASSES-----*/
-
-.hello_h2 {
-  font-size: 4.5rem;
-}
-.hello_desc {
-  font-size: 2rem;
-}
+/*-----BLOCK CONTENTS & CLASSES-----Main Page-----*/
 .hello-text {
+  z-index:-1;
   margin: 4rem;
   text-align: left;
   position: relative;
   color: var(--primary-color);
 }
-
-.rainbow_text_animated {
-  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow_animation 6s ease-in-out infinite;
-  background-size: 400% 100%;
+.hello_h2 {
+  font-size: 4.5rem;
 }
-
-@keyframes rainbow_animation {
-  0%,100% {
-      background-position: 0 0;
-  }
-
-  50% {
-      background-position: 100% 0;
-  }
+.hello_desc {
+  font-size: 2rem;
+  margin-bottom: 4rem;
 }
 
 a.resumebtn {
-  position: relative;
-  margin-left: 6rem;
+  margin-left: 2rem;
   font-size: larger;
   padding:0.35em 1.2em;
   border:0.1em solid #000000;
@@ -245,6 +227,27 @@ a.resumebtn {
     
 }
 
+.rainbow_text_animated {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+
+
 
 /* Footer section */
 footer {
@@ -258,35 +261,33 @@ footer {
 
 /* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
-  nav {
-    padding: 1.5rem 1rem;
-  }
+
   nav ul {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 71px);
     background-color: var(--bg-color);
-    left: 0;
-    top: 2em;
+    width: 100%;
+    position: absolute;
+    top: 8.45rem;
+    right: 0;
+    z-index: 2;
+    padding: 0px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     text-align: center;
-    display: none;
-    margin-top: 71px;
+    gap: 1rem;
   }
 
   nav ul li {
     display: block;
-    padding: 10px 15px;
+    padding:10px;
   }
 
-  nav ul li a {
-    display: block;
-    padding: 10px 0;
+  #menuList {
+    margin: 0;
+    overflow: hidden;
+    transition: 0.5s;
   }
 
-  .side-menu:checked~nav ul {
-    display: block;
-  }
+
   .hello_h2 {
     font-size: 3rem;
   }
