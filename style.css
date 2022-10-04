@@ -250,11 +250,19 @@ a.resumebtn {
 /*-----BLOCK CONTENTS & CLASSES-----About Me-----*/
 
 .introduction-section,
-.location-section,
+.location-section{
+  text-align: center;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
 .questions-section {
   text-align: center;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-top: 1em;
 }
 
@@ -283,14 +291,16 @@ a.resumebtn {
 
 
 /* Footer section */
-footer {
-  background-color: var(--bg-color);
-  padding: 1.25rem;
-  text-align: center;
-  margin: 2rem 0 0;
+.foot {
+  width: 100%;
+  height:2em;
+  background-image: url('./images/WebsiteBackgroundTemp.png');
+  position:fixed;
+  bottom:0;
+  padding:0;
+  margin:0;
+  background-repeat:repeat round;
 }
-/* Footer section ends */
-
 
 /* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
