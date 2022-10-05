@@ -288,6 +288,47 @@ a.resumebtn {
   margin: 1em;
 }
 
+/*-----BLOCK CONTENTS & CLASSES-----Contact Page-----*/
+
+.contact ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.contact ul li {
+  list-style: none;
+  margin: 0 50px;
+}
+.contact ul li .fa-brands {
+  font-size: 30px;
+  line-height: 60px;
+  transition: .6s;
+  color: #44535E;
+}
+.contact ul li :hover .fa-brands{
+  color: #FFFFF0;
+}
+.contact ul li a {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  background-color: var(--secondary-color);
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+.contact ul li a:hover {
+  transform: translate(0, -10px);
+}
 
 
 
