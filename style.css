@@ -71,11 +71,12 @@
   }
 
   hr {
-    border-bottom: dashed 1px #000000;
+    border: none;
+    border-bottom: 2px dashed var(--primary-color);
   }
   
   p{
-      font-family: 'torrancemedium';
+      font-family:'torrancemedium';
       font-weight:normal;
       font-style:normal;
   }
