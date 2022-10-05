@@ -188,6 +188,24 @@ nav ul li {
 
 
 /*-----BLOCK CONTENTS & CLASSES-----Main Page-----*/
+
+.mainpageBG {
+  background-color: white; 
+  background-size: auto; 
+  background-position: bottom right; 
+  background-image: url('./images/HelloPagebg.png'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 950px) {
+  .mainpageBG {
+    background-size: 0px 0px; 
+    background-position: bottom right;
+    
+  }
+}
+
+
 .hello-text {
   z-index:0;
   margin: 4rem;
@@ -213,6 +231,7 @@ a.resumebtn {
   text-decoration:none;
   font-family:'chicagoflfregular';
   font-weight: 500;
+  background-color: var(--bg-color);
   color:#000000;
   text-align:center;
   transition: all 0.2s;
@@ -346,7 +365,6 @@ a.resumebtn {
 
 /* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
-
   nav ul {
     background-color: var(--bg-color);
     width: 100%;
@@ -360,19 +378,15 @@ a.resumebtn {
     text-align: center;
     gap: 1rem;
   }
-
   nav ul li {
     display: block;
     padding:10px;
   }
-
   #menuList {
     margin: 0;
     overflow: hidden;
     transition: 0.5s;
   }
-
-
   .hello_h2 {
     font-size: 3rem;
   }
