@@ -326,10 +326,10 @@ a.resumebtn {
   font-size: 30px;
   line-height: 60px;
   transition: .6s;
-  color: #44535E;
+  color: var(--primary-color);
 }
 .contact ul li :hover .fa-brands{
-  color: #FFFFF0;
+  color: var(--third-color);
 }
 .contact ul li a {
   border-style: solid;
@@ -350,6 +350,40 @@ a.resumebtn {
 }
 
 
+/*-----BLOCK CONTENTS & CLASSES-----Portfolio Page-----*/
+.gallery {
+  display: grid;
+  max-width: 100%;
+  margin: 2em auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.gallery-item {
+  padding-top: 6px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: all .3s;
+}
+.gallery-item img {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  object-fit: scale-down;
+}
+.gallery-item p{
+  text-align: center;
+}
+.gallery-item:hover{
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
 
 /* Footer section */
 .foot {
