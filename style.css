@@ -43,6 +43,9 @@
   margin: 0;
 }
 
+canvas{
+  display: block;
+}
 /*---Body Presets--*/
 
   a {
