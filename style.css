@@ -88,6 +88,20 @@ canvas{
       list-style-type: circle;
   }
 
+  input[type="text"] {
+    padding: 5px;
+    width: 150px;
+  }
+
+  label {
+    font-family:'torrancemedium';
+    font-weight:normal;
+    font-style:normal;
+  }
+
+  button{
+    font-family: "chicagoflfregular", sans-serf;
+  }
 /*---Navbar---*/
 
 nav {
@@ -192,14 +206,16 @@ nav ul li {
 
 /*-----BLOCK CONTENTS & CLASSES-----Main Page-----*/
 
+/*
 .mainpageBG {
   background-color: white; 
-  background-size: auto; 
+  background-size: 500px, 500px; 
   background-position: bottom right; 
-  background-image: url('./images/HelloPagebg.png'); 
+  background-image: url('./images/ASCII-art.png'); 
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 950px) {
   .mainpageBG {
     background-size: 0px 0px; 
@@ -207,7 +223,7 @@ nav ul li {
     
   }
 }
-
+*/
 
 .hello-text {
   z-index:0;
@@ -228,7 +244,8 @@ a.resumebtn {
   margin-left: 2rem;
   font-size: larger;
   padding:0.35em 1.2em;
-  border:0.1em solid #000000;
+  border-style: solid;
+  border-width: 2px 4px 4px 2px;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration:none;
@@ -252,7 +269,7 @@ a.resumebtn {
 }
 
 .rainbow_text_animated {
-  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background: linear-gradient(to right, var(--secondary-color), var(--third-color) , var(--fourth-color), var(--secondary-color));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -336,7 +353,7 @@ a.resumebtn {
 }
 .contact ul li a {
   border-style: solid;
-  border-width: 2px;
+  border-width: 2px 4px 4px 2px;
   border-color: #000000;
   position: relative;
   display: block;
@@ -346,7 +363,7 @@ a.resumebtn {
   background-color: var(--secondary-color);
   text-align: center;
   transition: .6s;
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 5px 4px 0px rgba(0, 0, 0, 0.5);
 }
 .contact ul li a:hover {
   transform: translate(0, -10px);
@@ -402,6 +419,9 @@ a.resumebtn {
 
 /* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
+  pre{
+    font-size: 5px;
+  }
   nav ul {
     background-color: var(--bg-color);
     width: 100%;

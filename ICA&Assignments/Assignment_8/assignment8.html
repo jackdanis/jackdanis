@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width">
 
     <title>Silly story generator</title>
-
+    <link rel="stylesheet" href="../../style.css">
     <style>
-
-    body {
-      font-family: helvetica, sans-serif;
+    @font-face {
+    font-family: 'chicagoflfregular';
+    src: url('../fonts/chicagoflf-webfont.woff') format('woff'),
+        url('../fonts/chicagoflf-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'torrancemedium';
+    src: url('fonts/torrance-lgzl0-webfont.woff2') format('woff2'),
+        url('fonts/torrance-lgzl0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    .body {
       width: 350px;
     }
 
     label {
+      font-family: "chicagoflfregular", sans-serf;
       font-weight: bold;  
     }
 
-    div {
+    .divvy {
+      font-family: "chicagoflfregular", sans-serf;
       padding-bottom: 20px;
     }
 
@@ -28,21 +42,25 @@
     }
 
     p {
+      font-family: 'torrancemedium';
+      font-weight:normal;
+      font-style:normal;
+      text-decoration: none;
       background: #FFC125;
       color: #5E2612;
       padding: 10px;
       visibility: hidden;
     }
 
-    </style>
+    </style> 
   </head>
 
   <body>
-    <div>
+    <div class="divvy">
       <label for="customname">Enter custom name:</label>
       <input id="customname" type="text" placeholder="">
     </div>
-    <div>
+    <div class="divvy">
       <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
       <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
     </div>
