@@ -1,0 +1,83 @@
+/*---Fonts---*/
+@font-face {
+  font-family: 'chicagoflfregular';
+  src: url('/fonts/chicagoflf-webfont.woff') format('woff'),
+       url('/fonts/chicagoflf-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'torrancemedium';
+  src: url('fonts/torrance-lgzl0-webfont.woff2') format('woff2'),
+      url('fonts/torrance-lgzl0-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-family: "chicagoflfregular", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #000000;
+  --secondary-color: rgb(144,215,236);
+  --third-color: rgb(244,154,194);
+  --fourth-color: rgb(249,235,105);
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #000000;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+h1 {
+  font-family: 'chicagoflf';
+  text-align: center;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+}
+
+.displayed-img {
+  width: 640px;
+  height: 480px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  background: rgba(150,150,150,0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
+
