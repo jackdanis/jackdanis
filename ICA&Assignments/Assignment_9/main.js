@@ -5,9 +5,9 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const images = ['pic1.jpeg','pic2.png','pic3.png','pic4.png','pic5.png'];
+const images = ['pic1.png','pic2.png','pic3.png','pic4.png','pic5.png'];
 /* Declaring the alternative text for each image file */
-const alts = {'pic1.jpeg' : 'Spider-man Reading a Book', 'pic2.png' : 'Isometric Rendering made up of Text', 'pic3.png' : 'Purple and white pansies', 'pic4.png' : 'Two handsome men sitting', 'pic5.png' : 'Cyberpunk render of Chicago'}
+const alts = {'pic1.png' : 'Art Deco', 'pic2.png' : 'Isometric Rendering made up of Text', 'pic3.png' : 'Purple and white pansies', 'pic4.png' : 'Two handsome men sitting', 'pic5.png' : 'Cyberpunk render of Chicago'}
 /* Looping through images */
 for (const image of images) {
     const newImage = document.createElement('img');
