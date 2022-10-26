@@ -41,11 +41,12 @@ function displayCatInfo(catString) {
     // Add your code here
     catString = JSON.parse(catString)
     for(let i in catString){
-    if(i == catString.length -1){
-    motherInfo += `and ${catString[i].name}.`
-    }else{
-    motherInfo += `${catString[i].name}, `
-    }
+      if(i == catString.length -1){
+        motherInfo += `and ${catString[i].name}.`
+        }
+        else{
+        motherInfo += `${catString[i].name}, `
+      }
     }
 
     let kittens =[];
@@ -59,7 +60,6 @@ function displayCatInfo(catString) {
     para1.textContent = motherInfo;
     para2.textContent = kittenInfo;
 }
-
-section.appendChild(para1);
-section.appendChild(para2);
+  section.appendChild(para1);
+  section.appendChild(para2);
   </script>
