@@ -1,0 +1,36 @@
+[
+    {
+      "company_name":"Tech Stars",
+      "website":"www.techstars.site",
+      "employees": [
+        {
+            "first_name" : "Sam",
+            "department" : "Tech",
+            "designation" : "Manager",
+            "salary": "40000",
+            "raise_eligible":"true"
+          },
+          {
+            "first_name" : "Mary",
+            "department" : "Finance",
+            "designation" : "Trainee",
+            "salary": "18500",
+            "raise_eligible":"true"
+          },
+          {
+            "first_name" : "Bill",
+            "department" : "HR",
+            "designation" : "Executive",
+            "salary": "21200",
+            "raise_eligible":"false"
+          },
+          {
+            "first_name" : "Anna",
+            "department" : "Tech",
+            "designation" : "Executive",
+            "salary": "25600",
+            "raise_eligible":"false"
+          }
+      ]  
+    }
+]
