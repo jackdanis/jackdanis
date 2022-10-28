@@ -9,57 +9,144 @@
 <body>
     <h1>Hey! This is Assignment 10</h1>
     <script>
-        const company = [
-    {
-      "company_name":"Tech Stars",
-      "website":"www.techstars.site",
-      "employees": [
-        {
-            "first_name" : "Sam",
-            "department" : "Tech",
-            "designation" : "Manager",
-            "salary": "40000",
-            "raise_eligible":"true"
-          },
-          {
-            "first_name" : "Mary",
-            "department" : "Finance",
-            "designation" : "Trainee",
-            "salary": "18500",
-            "raise_eligible":"true"
-          },
-          {
-            "first_name" : "Bill",
-            "department" : "HR",
-            "designation" : "Executive",
-            "salary": "21200",
-            "raise_eligible":"false"
-          },
-          {
-            "first_name" : "Anna",
-            "department" : "Tech",
-            "designation" : "Executive",
-            "salary": "25600",
-            "raise_eligible":"false"
-          }
-      ]  
-    }
-];
+        //Task 1 - Create JSON for Employees
+            const employees = { 
+                "employees": [
+            {
+                "first_name" : "Sam",
+                "department" : "Tech",
+                "designation" : "Manager",
+                "salary": 40000,
+                "raise_eligible":true
+            },
+            {
+                "first_name" : "Mary",
+                "department" : "Finance",
+                "designation" : "Trainee",
+                "salary": 18500,
+                "raise_eligible":true
+            },
+            {
+                "first_name" : "Bill",
+                "department" : "HR",
+                "designation" : "Executive",
+                "salary": 21200,
+                "raise_eligible":false
+            }
+            ]}
+        console.log(employees)  
+        //Task 2 - Create JSON for Company
+            const company1 = { 
+            
+            "company_name":"Tech Stars",
+            "website":"www.techstars.site",
+            "employees": [
+                {
+                    "first_name" : "Sam",
+                    "department" : "Tech",
+                    "designation" : "Manager",
+                    "salary": 40000,
+                    "raise_eligible":true
+                },
+                {
+                    "first_name" : "Mary",
+                    "department" : "Finance",
+                    "designation" : "Trainee",
+                    "salary": 18500,
+                    "raise_eligible":true
+                },
+                {
+                    "first_name" : "Bill",
+                    "department" : "HR",
+                    "designation" : "Executive",
+                    "salary": 21200,
+                    "raise_eligible":false
+                }
+                ]  
+            };
+            console.log(company1)
+        //Task 3 - Update the JSON for Anna [Function]
+            const company2 = { 
+            
+            "company_name":"Tech Stars",
+            "website":"www.techstars.site",
+            "employees": [
+                {
+                    "first_name" : "Sam",
+                    "department" : "Tech",
+                    "designation" : "Manager",
+                    "salary": 40000,
+                    "raise_eligible":true
+                },
+                {
+                    "first_name" : "Mary",
+                    "department" : "Finance",
+                    "designation" : "Trainee",
+                    "salary": 18500,
+                    "raise_eligible":true
+                },
+                {
+                    "first_name" : "Bill",
+                    "department" : "HR",
+                    "designation" : "Executive",
+                    "salary": 21200,
+                    "raise_eligible": false
+                }
+                ]  
+             };
+            function addEmployee(obj, name, dep, des, sal, raise) {
+                let employee = {
+                    "first_name": name,
+                    "department": dep,
+                    "designation": des,
+                    "salary": sal,
+                    "raise_eligible": raise
+                };
+               obj['employees'].push(employee);
+            }
+            addEmployee(company2, "Anna", "Tech", "Executive", 25600, false);
+            console.log(company2)
 
-        //Task1
-        
-
-        console.log(JSON.stringify(company.employees['first_name']));
-        //Task2
-
-        //Task3
 
         //Task4 - Total Salary
-        let total_salary = 0;
+        
+            let salaryTotal = 0;
+            for(let i = 0; i < company2.employees.length; i++){
+                salaryTotal += company2.employees[i]['salary'];
+            }
+            console.log(salaryTotal);
 
         //Task5
 
+            for(let i = 0; i < company2.employees.length; i++){
+                if(company2.employees[i]['raise_eligible'] === true){
+                    company2.employees[i]['salary'] += company2.employees[i]['salary'] * 0.1;
+                    company2.employees[i]['raise_eligible'] = false;
+                }
+            }
+            console.log(company2.employees);
+
         //Task6
+
+        let check = false;
+        let wfh = ['Anna', 'Sam'];
+        for(let i = 0; i < company2.employees.length; i++){ //Checks list for all employees
+            let name = company2.employees[i].first_name; //Stores name var for each employee in loop
+            for(let j = 0; j < wfh.length; j++){  //Checks if work-from-home matches employee name
+                if(wfh[j] === name){ //adds true boolean for those names
+                    check = true;
+                }
+            }
+            if(check === true){ //sets the wfh value to true for each matching employee
+                company2['employees'][i].workFromHome = true;
+            }
+            if(check === false) {
+                company2['employees'][i].workFromHome = false;
+            }
+            check = false;
+        }
+        console.log(company2);
+
 
     </script>
 </body>
