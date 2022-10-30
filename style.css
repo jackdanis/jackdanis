@@ -412,7 +412,7 @@ a.resumebtn {
   background-image: url('./images/WebsiteBackgroundTemp.png');
   position:fixed;
   bottom:0;
-  padding:0;
+  padding: 0;
   margin:0;
   background-repeat:repeat round;
 }
