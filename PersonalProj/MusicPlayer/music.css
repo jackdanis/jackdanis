@@ -1,15 +1,29 @@
+@font-face {
+  font-family: 'mangat';
+  src: url('../../fonts/mangat.woff') format('woff'),
+      url('../../fonts/mangat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
-    background-color: lightgreen;
-   
-    /* Smoothly transition the background color */
-    transition: background-color .5s;
+  background-color: white;
+  font-family: 'mangat', sans-serif;
+  /* Smoothly transition the background color */
+  transition: background-color .5s;
   }
    
+h1,h2 {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
 
 .mainpageBG {
   /* background-color: white; */
-  background-size: 500px, 500px; 
-  background-position: bottom left; 
+  background-size: 300px, 300px; 
+  background-position: bottom 75px left; 
   background-image: url('./img/SittingManAI.png'); 
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -24,9 +38,11 @@ body {
   position:fixed;
   border-color: black;
   padding:0.35em 1.2em;
+  border-image: url(./img/BoundaryBoxSketch.png);
+  border-image-slice: 20;
+  border-image-width: 10;
   border-style: solid;
-  border-width: 2px 4px 4px 2px;
-  border-radius: 0.12em;
+  border-width: 1px 1px 1px 1px;
   box-sizing: border-box;
   left:0;
   bottom:0;
@@ -34,26 +50,29 @@ body {
   margin:0;
   flex-direction: row;
   justify-content: center;
+  flex-flow: row nowrap;
 }
 
 .details {
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
   display: flex;
-  align-items: left;
   flex-direction: row;
-  justify-content: left;
-  margin-top: 25px;
+  margin: 20px;
 }
    
-  .track-art {
-    margin-top: -12px;
-    margin-left: 16px;
-    height: 50px;
-    width: 50px;
-    background-image: URL("https://source.unsplash.com/Qrspubmx6kE/640x360");
-    background-size: cover;
-    background-position: center;
-    border-radius: 15%;
-  }
+.track-art {
+  margin-top: -8px;
+  margin-left: 16px;
+  height: 50px;
+  width: 50px;
+  background-image: URL("https://source.unsplash.com/Qrspubmx6kE/640x360");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+}
    
   /* Changing the font sizes to suitable ones */
   .now-playing {
@@ -75,14 +94,15 @@ body {
      align items in a horizontal direction */
   .buttons {
     display: flex;
+    justify-content: right;
     flex-direction: row;
-    align-items: center;
+    padding-right: 2px;
   }
    
   .playpause-track,
   .prev-track,
   .next-track {
-    padding: 25px;
+    padding: 0px;
     opacity: 0.8;
    
     /* Smoothly transition the opacity */
@@ -98,11 +118,10 @@ body {
    
   /* Define the slider width so that it scales properly */
   .slider_container {
-    width: 75%;
+    width: 105%;
     max-width: 50%;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
   }
    
   /* Modify the appearance of the slider */
@@ -125,7 +144,7 @@ body {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: white;
+    background: black;
     cursor: pointer;
     border-radius: 50%;
   }
@@ -137,7 +156,8 @@ body {
   }
    
   .seek_slider {
-    width: 60%;
+    width: 70%;
+    margin-top: 15px;
   }
    
   .volume_slider {
@@ -161,4 +181,11 @@ body {
   i.fa-step-forward,
   i.fa-step-backward {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 720px) {
+    .track-name,.track-artist,.now-playing{
+      display: none;
+    }
+
   }

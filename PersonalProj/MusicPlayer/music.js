@@ -25,23 +25,11 @@ let curr_track = document.createElement('audio');
 // Define the list of tracks that have to be played
 let track_list = [
   {
-    name: "Night Owl",
-    artist: "Broke For Free",
+    name: "Mysterious",
+    artist: "Mario Paint",
     image: "Image URL",
-    path: "Night_Owl.mp3"
-  },
-  {
-    name: "Enthusiast",
-    artist: "Tours",
-    image: "Image URL",
-    path: "Enthusiast.mp3"
-  },
-  {
-    name: "Shipping Lanes",
-    artist: "Chad Crouch",
-    image: "Image URL",
-    path: "Shipping_Lanes.mp3",
-  },
+    path: "./img/Mysterious.mp3"
+  }
 ];
 
 function loadTrack(track_index) {
@@ -70,7 +58,7 @@ function loadTrack(track_index) {
     curr_track.addEventListener("ended", nextTrack);
    
     // Apply a random background color
-    random_bg_color();
+    // random_bg_color();
   }
    
   function random_bg_color() {
@@ -84,7 +72,7 @@ function loadTrack(track_index) {
     let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
    
     // Set the background to the new color
-    document.body.style.background = bgColor;
+    document.body.style.backgroundColor = bgColor;
   }
    
   // Function to reset all values to their default
@@ -107,7 +95,7 @@ function loadTrack(track_index) {
     isPlaying = true;
    
     // Replace icon with the pause icon
-    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-2x"></i>';
   }
    
   function pauseTrack() {
@@ -116,7 +104,7 @@ function loadTrack(track_index) {
     isPlaying = false;
    
     // Replace icon with the play icon
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-2x"></i>';
   }
    
   function nextTrack() {
