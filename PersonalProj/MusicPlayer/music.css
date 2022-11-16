@@ -29,6 +29,15 @@ h1,h2 {
   background-repeat: no-repeat;
 }
 
+.subpageBG {
+  /* background-color: white; */
+  background-size: 300px, 300px; 
+  background-position: bottom 75px left; 
+  background-image: url('./img/SittingManBeats.png'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 
   /* Using flex with the column direction to
      align items in a vertical direction */
