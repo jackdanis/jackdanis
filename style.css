@@ -300,6 +300,7 @@ a.resumebtn {
 
 .questions-section {
   text-align: center;
+  padding-bottom: 100px;
   margin-bottom: 2em;
   margin-left: 1em;
   margin-right: 1em;
@@ -384,6 +385,7 @@ a.resumebtn {
 
 .gallery {
   width: 100%;
+  padding-bottom: 100px;
 }
 
 .gallery-row {
