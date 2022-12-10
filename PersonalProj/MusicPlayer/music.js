@@ -13,6 +13,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-2');
+  
   flockCenter = createVector(0, 0);
   keyboardTarget = createVector(400, 200);
   
