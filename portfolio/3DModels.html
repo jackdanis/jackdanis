@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models Page</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href='index.html'><img src='images/Logo.png' alt='menu' width="200em" /></a>
+  
+        <input type="checkbox" class="side-menu" id="side-menu" onclick="togglemenu()"/>
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+  
+        <ul id="menuList">
+          <li><a href="../index.html" class="nav_link">Main Page</a></li>
+          <li><a href="../portfolio.html" class="nav_link">Portfolio</a></li>
+          <li><a href="../aboutme.html" class="nav_link">About Me</a></li>
+          <li><a href="../contact.html" class="nav_link">Contact</a></li>
+          <li><a href="../PersonalProj/MusicPlayer/music.html" class="nav_link">JavaScript Experiment</a></li>
+        </ul>
+      </nav>
+
+
+    <section class="introduction-section">
+        <h1>3D Models</h1>
+        <p>These projects were created for my ATLAS - Form Class. <br> They were a practice in designing 3D Models using AutoCAD Fusion.</p>
+    </section>
+
+
+
+     <!--JavaScript-->
+     <script>
+        let menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+          if(menuList.style.maxHeight == "0px")
+          {
+            menuList.style.maxHeight = "15rem";
+          }
+          else
+          {
+            menuList.style.maxHeight = "0px";
+          }
+        }
+      </script>
+</body>
+</html>
