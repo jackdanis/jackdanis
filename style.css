@@ -447,6 +447,7 @@ a.resumebtn {
   nav ul {
     background-color: var(--bg-color);
     width: 100%;
+    max-height: fit-content;
     position: absolute;
     top: 8.45rem;
     right: 0;
@@ -455,7 +456,7 @@ a.resumebtn {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   nav ul li {
     display: block;
