@@ -1,5 +1,157 @@
+// ---- AUDIO VISUALIZER API ---- 
+let birds = [];
+let flockCenter;
+let keyboardTarget;
+
+//Setup
+//Updates Canvas size to match window size & checks on each frame
+function windowResized(){
+  resizeCanvas(windowWidth,windowHeight);
+}
+
+function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-2');
+  flockCenter = createVector(0, 0);
+  keyboardTarget = createVector(400, 200);
+  
+  for (let i = 0; i < 50; i++) {
+     birds.push(new Bird(random(windowWidth/4) + windowWidth/4, random(windowHeight/4) + windowHeight/4));
+  }
+}
+//Bird Behavior
+class Bird {
+  constructor(x, y) {
+    this.position = createVector(x, y);
+    this.velocity = createVector(1, 1);
+
+    this.maxSpeed = 4;
+  }
+  
+  seek(target, weight) {
+    let dir = p5.Vector.sub(target, this.position);
+    dir.setMag(weight);
+    this.velocity.add(dir);
+  }
+  
+  flee(target, weight) {
+    let dir = p5.Vector.sub(this.position, target);
+    let dist = dir.mag();
+    
+    if (dist < 100) {
+      let m = map(dist, 0, 100, 0, 1);
+      dir.mult(m);
+      
+      let steer = p5.Vector.sub(dir, this.velocity);
+      steer.limit(weight);
+      this.velocity.add(steer);
+    }
+  }
+  
+  arrive(target, weight) {
+    let dir = p5.Vector.sub(target, this.position);
+    let dist = dir.mag();
+    
+    if (dist < 300) {
+      let m = map(dist, 0, 300, 40, 0);
+      dir.mult(m);
+    }
+    
+    let steer = p5.Vector.sub(dir, this.velocity);
+    steer.limit(weight);
+    this.velocity.add(steer);
+  }
+  
+  separate(flock, weight, minDist) {
+    // sum up all of the neighbors
+    let force = createVector(0,0);
+    
+    for (let i= 0; i < flock.length; i++) {
+      let b = flock[i];
+      
+      let dir = p5.Vector.sub(this.position, b.position);
+      let d = dir.mag();
+      
+      if (d < minDist) {
+        force.add(dir);
+      }
+    }
+    
+    force.setMag(weight);
+    this.velocity.add(force);
+  }
+  
+  cohesion(center, weight) {
+    this.arrive(center, weight);
+  }
+  
+  update() {
+    if (this.velocity.mag() > this.maxSpeed) this.velocity.setMag(this.maxSpeed);
+
+    this.position.add(this.velocity);
+  }
+
+//Draw Triangle
+draw() {
+    push();
+
+    //Sets visual behavior for birds and their shape / color
+    translate(this.position.x, this.position.y);
+    rotate(this.velocity.heading()- PI / 2);
 
 
+    stroke(0);
+    fill(255);
+
+    triangle(-10, -10, 0, 15, 10, -10);
+
+    pop();
+  }
+}
+
+
+// What will be called on 'draw'
+function draw() {
+  //This sets up math operations so the birds know where to track the center of the Screen
+  let CanWidth = windowWidth;
+  let CanHeight = windowHeight;
+  
+  flockCenter.set(0, 0);
+  for (let i = 0; i < birds.length; i++) {
+    flockCenter.add(birds[i].position);
+  }
+  flockCenter.div(birds.length);
+  
+  //Makes a dot in the center of screen
+  fill(0);
+  circle(CanWidth/2, CanHeight/2, 15);
+  fill(250);
+  
+  stroke(10 + noise(frameCount/ 1000) * 200, 200, 200)
+  for (let i = 0; i < birds.length; i++) {
+    
+    let b = birds[i];
+    
+    // if (i < 20) {
+    //   b.seek(createVector(mouseX, mouseY), 0.1)
+    // }
+
+    b.seek(createVector(CanWidth/2, CanHeight/2), 0.1)//This is the location where the birds flock 'around'
+    b.flee(createVector(mouseX, mouseY), 0.5);
+    b.separate(birds, 0.5, 30);
+    b.cohesion(flockCenter, 0.05);
+
+    b.update()
+    b.draw();
+  }
+}
+
+
+
+
+
+// -- The initial code used for this audio player was taken from https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
 
 // Select all the elements in the HTML page
 // and assign them to a variable
@@ -101,8 +253,8 @@ function loadTrack(track_index) {
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-2x"></i>';
     //Replace Background Image with Headphones
     document.getElementById('body').className = "subpageBG";
-    //Play Audio Visualization
-    wave.playStream();
+    //Set canvas to play
+
   }
    
   function pauseTrack() {
@@ -114,6 +266,8 @@ function loadTrack(track_index) {
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-2x"></i>';
     //Replaces Background Image with Default Background
     document.getElementById('body').className = "mainpageBG";
+    //Hide Canvas page
+
   }
    
   function nextTrack() {
@@ -189,9 +343,3 @@ loadTrack(track_index);
 
 
 
-// ---- AUDIO VISUALIZER API ---- 
-var wave = new Wave();
-var audio = document.getElementById("audio");
-var canvas = document.getElementById("wave");
-wave.fromFile(track_list[track_index].path, {
-  type: ["bars"]})

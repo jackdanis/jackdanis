@@ -198,3 +198,24 @@ h1,h2 {
     }
 
   }
+
+
+
+#wave{
+  display: flex;  
+  flex-direction: row;  
+  align-items: center;
+  justify-content: center;
+  height: 100px;  width: 100%;
+  background: transparent;
+}
+
+#canvasid {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  z-index: -1;
+}
+
