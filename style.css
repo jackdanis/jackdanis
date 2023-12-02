@@ -292,6 +292,7 @@ a.resumebtn {
 .introduction-section,
 .location-section{
   text-align: center;
+  
   margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
@@ -312,6 +313,8 @@ a.resumebtn {
 .questions-section > p {
   font-weight: 300;
   margin: 1rem;
+  margin-left: 12em;
+  margin-right: 12em;
 }
 
 .introduction-section > h1,
@@ -473,9 +476,18 @@ a.resumebtn {
   .hello_desc {
     font-size: 1rem;
   }
-
   .hamb{
     display: block;
   }
+
+  .introduction-section > p,
+.location-section > p,
+.questions-section > p {
+  font-weight: 300;
+  margin: 1rem;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
 }
 
