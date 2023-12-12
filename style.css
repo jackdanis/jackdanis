@@ -440,6 +440,42 @@ a.resumebtn {
   background-repeat:repeat round;
 }
 
+/* Portfolio Pages Image Showcase */
+
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageShowcase {
+  width: 450px;
+  height: 300px;
+  margin: 10px;
+  border: 10px solid #ffffff;
+  transition-duration: 1s;
+}
+
+.imageShowcase:hover {
+  border: 5px solid #fff;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Test View */
+
+
+.bodytext {
+  
+}
+
+
+
+
+
+
 
 /* Media queries for Mobile View */
 @media screen and (max-width: 720px) {
@@ -483,8 +519,9 @@ a.resumebtn {
     width: 100% !important;
   }
 
+/*This handles mobile view text formatting, very poorly done and needs to be reworked long-term but hey.  */
 
-  .introduction-section > p,
+.introduction-section > p,
 .location-section > p,
 .questions-section > p {
   font-weight: 300;
