@@ -12,7 +12,13 @@
         url('fonts/torrance-lgzl0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+  }
 
+  @font-face {
+    font-family: 'century-gothic';
+    src: url('fonts/CenturyGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
   }
 
   :root {
@@ -310,6 +316,8 @@ a.resumebtn {
 .introduction-section > p,
 .location-section > p,
 .questions-section > p {
+  font-family:'century-gothic';
+  font-style:normal;
   font-weight: 300;
   margin: 1rem;
   margin-left: 12em;
@@ -329,6 +337,28 @@ a.resumebtn {
   font-size: large;
   margin: 1em;
 }
+
+
+.portfolio-section {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+.portfolio-section > p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family:'century-gothic';
+    font-weight:normal;
+    font-style:normal;
+}
+
+
 
 /*-----BLOCK CONTENTS & CLASSES-----Contact Page-----*/
 
@@ -458,20 +488,11 @@ a.resumebtn {
 }
 
 .imageShowcase:hover {
-  border: 5px solid #fff;
+  /* border: 5px solid #fff; */
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-/* Test View */
-
-
-.bodytext {
-  
-}
-
-
 
 
 
