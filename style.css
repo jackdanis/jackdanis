@@ -489,14 +489,12 @@ a.resumebtn {
   padding-left: 2%;
   padding-right: 2%;
   padding-top: 2%;
-
 }
 
 .portfolio-gallery-item {
   padding-top: 6px;
   max-width: 100%;
   border-radius: 5px;
-  
   transition: all .3s;
 }
 .portfolio-gallery-item > img {
@@ -583,7 +581,6 @@ a.resumebtn {
   }
 
 /*This handles mobile view text formatting, very poorly done and needs to be reworked long-term but hey.  */
-
   .introduction-section > p,
   .location-section > p,
   .questions-section > p {
@@ -593,5 +590,7 @@ a.resumebtn {
     margin-right: 4em;
   }
 
+  .portfolio-gallery-row {
+    flex-wrap: wrap;
+  }
 }
-
