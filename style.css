@@ -322,6 +322,8 @@ a.resumebtn {
   margin: 1rem;
   margin-left: 12em;
   margin-right: 12em;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .introduction-section > h1,
@@ -588,6 +590,8 @@ a.resumebtn {
     margin: 1rem;
     margin-left: 4em;
     margin-right: 4em;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .portfolio-gallery-row {
