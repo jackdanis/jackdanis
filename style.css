@@ -486,7 +486,7 @@ a.resumebtn {
 
 .portfolio-gallery-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
@@ -514,6 +514,17 @@ a.resumebtn {
   padding: 5px;
   margin: 5px;
 }
+
+.portfolio-text > body,
+.portfolio-text > p{
+  padding: 1.5em;
+  max-width: 720px;
+  margin: auto;
+  font-family:'century-gothic';
+    font-weight:normal;
+    font-style:normal;
+}
+
 
 
 .imageContainer {
