@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models Page</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+      <nav class="nav">
+        <a href='../index.html'><img src='../images/Logo.png' alt='menu' width="200em" /></a>
+
+        <input type="checkbox" class="side-menu" id="side-menu" onclick="togglemenu()"/>
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+
+        <ul id="menuList">
+          <li><a href="../index.html" class="nav_link">Main Page</a></li>
+          <li><a href="../portfolio.html" class="nav_link">Portfolio</a></li>
+          <li><a href="../aboutme.html" class="nav_link">About Me</a></li>
+          <li><a href="../contact.html" class="nav_link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="introduction-section">
+        <h1>Programming Work</h1>
+        <div class="portfolio-gallery">
+          <!--1st Project-->
+          <h2>ATLAS - JavaScript & p5</h2>
+          <div class="portfolio-gallery-row">
+            <div class="portfolio-gallery-item">
+              <a href="../PersonalProj/MusicPlayer/music.html">
+              <img src="../images/Programming/MusicPlayer.png"></a>
+              <figcaption>Music Player Website & Dynamic Backgrounds with JavaScript</figcaption>
+            </div>
+            <div class="portfolio-text">
+              <p>This was created during my time at ATLAS as a way to see if I could implement music into a website. This also served to test my ability to change images on command using a combination of CSS and JS without relying on any advanced libraries (besides p5). Try putting your cursor over the flying triangles, they'll try to avoid it! This project is also responsive! Meaning it will properly resize the music player and p5 animation for mobile and desktop, try resizing the screen, it'll still work!</p>
+            </div>
+          </div>
+          <div class="portfolio-gallery-row">
+            <div class="portfolio-gallery-item">
+              <a href="../p5Projects/p5demo.html">
+              <img src="../images/Programming/p5js.png" width="500px"></a>
+              <figcaption>Assortment of Creative Projects using JavaScript and the p5 Library</figcaption>
+            </div>
+            <div class="portfolio-text">
+              <p>These were created during my time at ATLAS</p>
+            </div>
+          </div>
+          <h2>ATLAS HTML & CSS Assignments</h2>
+          <div class="portfolio-gallery-row">
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment_2_Basic_Website/Assignment2.html">
+              <p>Assignment 2 - Basic Website Test</p></a>
+              <figcaption>My first true website assignment and an ugly one at that! But it has some fun CSS tweaks...?</figcaption>
+            </div>
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment_3_Encyclopedia/Assignment3.html">
+              <p>Assignment 3 - Encyclopedia</p></a>
+              <figcaption>A basic Encyclopedia with information pulled from an open-source project.</figcaption>
+            </div>
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment_8/assignment8.html">
+              <p>Assignment 8 - Random Story Generator</p></a>
+              <figcaption>A madlibs type story generator that changes based on the given information and on the version of English spoken by the user.</figcaption>
+            </div>
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment_9/index.html">
+              <p>Assignment 9 - Basic Image Gallery</p></a>
+              <figcaption>A basic example of an image gallery possible through HTML / CSS.</figcaption>
+            </div>
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment11_ElectricBoogaloo/assignment11.html">
+              <p>Assignment 11 - Random Pokemon Generator</p></a>
+              <figcaption>This website serves as an example of my ability to pull data from an array and have it appear on a site.</figcaption>
+            </div>
+            <div class="portfolio-gallery-item">
+              <a href="../ICA&Assignments/Assignment_8/assignment8.html">
+              <p>Assignment 12 - Terrible Phone Number Entry UI / UX</p></a>
+              <figcaption>This project is an example of how I can create a wonderful user-interface for a project, except I chose to create a deliberately terrible UI. It's visually interesting at the very least, and is a bit of a meme in the UI / UX world to create deliberately bad UI / UX such as this.</figcaption>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    
+       <!--JavaScript-->
+       <script>
+        let menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+          if(menuList.style.maxHeight == "0px")
+          {
+            menuList.style.maxHeight = "18rem";
+          }
+          else
+          {
+            menuList.style.maxHeight = "0px";
+          }
+        }
+      </script>
+</body>
+</html>
